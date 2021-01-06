@@ -2,6 +2,9 @@ package com.alvesjefs.ms_orders.dto;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.alvesjefs.ms_orders.domain.Orders;
 import com.alvesjefs.ms_orders.domain.enums.OrderStatus;
@@ -15,6 +18,8 @@ public class OrdersDTO implements Serializable {
 	private String longitude;
 	private Instant moment;
 	private OrderStatus orderStatus;
+
+	private Set<ProductsDTO> products = new HashSet<>();
 
 	public OrdersDTO() {
 	}
@@ -36,6 +41,7 @@ public class OrdersDTO implements Serializable {
 		longitude = orders.getLongitude();
 		moment = orders.getMoment();
 		orderStatus = orders.getOrderStatus();
+		products = orders.getProducts().stream().map(x -> new ProductsDTO(x)).collect(Collectors.toSet());
 	}
 
 	public Long getId() {
@@ -86,4 +92,7 @@ public class OrdersDTO implements Serializable {
 		this.orderStatus = orderStatus;
 	}
 
+	public Set<ProductsDTO> getProducts() {
+		return products;
+	}
 }
