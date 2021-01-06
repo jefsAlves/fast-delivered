@@ -1,0 +1,31 @@
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -23.567577, -47.654343, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 0);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -43.561680, -48.545139, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 1);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -23.564570, -49.656494, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 0);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -53.540932, -36.549304, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 0);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -43.564555, -43.439032, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 1);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -26.565466, -39.430944, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 0);
+INSERT INTO TB_ORDERS (ADDRESS, LATITUDE, LONGITUDE, MOMENT, ORDER_STATUS) VALUES ('Avenida Paulista, 1500', -25.561656, -46.349404, TIMESTAMP WITH TIME ZONE '2021-01-01T09:00:00Z', 0);
+
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Bacon', 'House-style pizza, with special sauce and all basic ingredients, and cheese of your choice', 59.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_moda.jpg');
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Moda Fashion', 'Bacon pizza with mozzarella, oregano, special sauce and house seasoning', 49.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_bacon.jpg');
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Portuguesa', 'Portuguese Pizza with special sauce, mozzarella, ham, eggs and spices', 45.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg');
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Pepperoni', 'Very light roasted salmon fillet with caper sauce, accompanied', 55.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg');	
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Marguarita', 'If you are looking for good pizza at an affordable price this is the place for you', 65.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg');	
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Four Cheese', 'We have a wide and cozy environment to celebrate your birthday, business get-together, gather friends or your family', 55.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg');	
+INSERT INTO TB_PRODUCTS (NAME, DESCRIPTION, PRICE, IMAGE_URI) VALUES ('Pizza Gennova', 'Sauce based on mustard, capers and parmesan flakes', 65.0, 'https://raw.githubusercontent.com/devsuperior/sds2/master/assets/pizza_portuguesa.jpg');	
+
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (1 , 1);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (1 , 4);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (2 , 2);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (2 , 5);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (2 , 7);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (3 , 3);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (3 , 4);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (4 , 2);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (4 , 6);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (5 , 4);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (5 , 6);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (6 , 5);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (6 , 1);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (7 , 7);
+INSERT INTO TB_ORDERS_PRODUCTS (order_id, product_id) VALUES (7 , 5);
