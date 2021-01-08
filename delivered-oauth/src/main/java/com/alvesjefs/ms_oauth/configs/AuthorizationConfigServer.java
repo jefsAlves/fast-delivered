@@ -1,6 +1,7 @@
 package com.alvesjefs.ms_oauth.configs;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,6 +17,12 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationConfigServer extends AuthorizationServerConfigurerAdapter {
 
+	@Value("${oauth.client.id}")
+	private String loginApp;
+	
+	@Value("${oauth.client.secret}")
+	private String passApp;
+	
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -36,8 +43,8 @@ public class AuthorizationConfigServer extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()
-		.withClient("MYAPP123")
-		.secret(bCryptPasswordEncoder.encode("MYSECRET123"))
+		.withClient(loginApp)
+		.secret(bCryptPasswordEncoder.encode(passApp))
 		.authorizedGrantTypes("password")
 		.scopes("read", "write")
 		.accessTokenValiditySeconds(86400);
